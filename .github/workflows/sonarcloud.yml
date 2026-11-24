@@ -1,4 +1,4 @@
-﻿name: SonarQube Cloud
+name: SonarQube Cloud
 
 on:
   push:
@@ -37,6 +37,6 @@ jobs:
         run: test -f coverage.xml
 
       - name: SonarQube Cloud scan
-        uses: SonarSource/sonarqube-scan-action@v6
+        uses: SonarSource/sonarqube-scan-action@fd88b7d7ccbaefd23d8f36f73b59db7a3d246602
         env:
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
